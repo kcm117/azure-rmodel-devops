@@ -1,0 +1,29 @@
+##########
+Local Build
+##########
+
+To build this docker container locally, you can perform the following:
+
+1) Open Command Prompt
+2) Change directory to this current directory where the Dockerfile resides
+3) Run the following command to build the container locally:
+	docker build -t rproject1 .
+4) Run the following command to run the container locally:
+	docker run -p 8000:8000 rproject1:latest
+5) Perform a HTTP GET against the local endpoint to test (Can do this in browser or via POSTMAN):
+	http://localhost:8000/weight?height=2000
+6) Response from the endpoint will be in the following format:
+	{
+    	"response": [
+        -792.5225
+    	]
+	}
+
+##########
+Azure DevOps Build
+##########
+
+1) Create and Configure build pipeline in Azure DevOps, ensure Trigger is set to the branch you desire.
+2) Commits to the target branch (usually master) should trigget the container build and deploy process in Azure Dev Ops.
+3) Example to pull docker container from Azure Container Registry:
+	
