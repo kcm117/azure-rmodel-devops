@@ -8,6 +8,8 @@ This is an example project for an R model.  It contains:
 
 There are separate training and scoring notebooks.  The training notebook leverages data stored in Azure Blob Storage and stores the trained, serialized model in Azure Blob Storage.  The scoring notebook loads the serialized model and scores data from a parameterized Azure Blob Storage location.  The notebook can be scheduled as a Databricks job or leveraged in a more expansive pipeline via Azure Data Factory.
 
+//todo - Write description of how to run the model in a batch process (parameterized Databricks notebook via ADF) or ad-hoc scoring.
+
 **Web Service**
 
 The service leverages the same model built in Azure Databricks, but exposes it as a REST API via Plumber.  All artifacts needed to build the container are in the /docker directory.  commits to this directory trigger a pipeline in Azure DevOps to build the container and store it in an Azure Container Registry.  From there, it can be manually pulled or deployed to various targets via a CD pipeline.
@@ -27,6 +29,10 @@ The response object is a JSON array with the format:
 }
 
 Please note that the model is created to demonstrate the deployment process, not to be a satisfactory or realistic weight prediction model.
+
+**CI/CD Process - Azure DevOps**
+
+//todo - Write description, with screenshots.
 
 **Links:**
 - https://www.rplumber.io/docs/hosting.html#docker
