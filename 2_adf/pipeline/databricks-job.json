@@ -20,7 +20,7 @@
 							"type": "Expression"
 						},
 						"outputdata_path": {
-							"value": "@concat('/dbfs/mnt/kcmunninstoragev2-databricks/output_files/',string(pipeline().parameters.source_file))",
+							"value": "@concat('/dbfs/mnt/kcmunninstoragev2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))",
 							"type": "Expression"
 						}
 					}
