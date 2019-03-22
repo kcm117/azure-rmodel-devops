@@ -1,0 +1,16 @@
+{
+	"name": "kcmunninstoragev2",
+	"properties": {
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "km330keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "adf-storagekey-kcmunninstoragev2"
+			}
+		}
+	}
+}
