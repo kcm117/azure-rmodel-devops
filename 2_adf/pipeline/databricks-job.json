@@ -13,7 +13,7 @@
 					"secureInput": false
 				},
 				"typeProperties": {
-					"notebookPath": "/Users/kcmunnin@microsoft.com/CustomerDemos/r_notebooks/rmodel-container-sample/score/r_score_batch_databricks",
+					"notebookPath": "/Users/kcmunnin@microsoft.com/CustomerDemos/r_notebooks/rproject1/score/r_score_batch_databricks",
 					"baseParameters": {
 						"inputdata_path": {
 							"value": "/dbfs/mnt/kcmunninstoragev2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
