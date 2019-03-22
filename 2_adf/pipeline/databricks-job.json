@@ -1,0 +1,46 @@
+{
+	"name": "databricks-job",
+	"properties": {
+		"activities": [
+			{
+				"name": "r_score_batch_databricks",
+				"type": "DatabricksNotebook",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookPath": "/Users/kcmunnin@microsoft.com/CustomerDemos/r_notebooks/project1/score/r_score_batch_databricks",
+					"baseParameters": {
+						"inputdata_path": {
+							"value": "/dbfs/mnt/kcmunninstoragev2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
+							"type": "Expression"
+						},
+						"outputdata_path": {
+							"value": "@concat('/dbfs/mnt/kcmunninstoragev2-databricks/output_files/',string(pipeline().parameters.source_file))",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "kmdatabricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"source_folder": {
+				"type": "String",
+				"defaultValue": "@triggerBody().folderPath"
+			},
+			"source_file": {
+				"type": "String",
+				"defaultValue": "@triggerBody().fileName"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
