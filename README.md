@@ -1,7 +1,7 @@
 # rmodel-container-sample
 
 This is an example project for an R model.  It contains:
-- Databricks Notebooks
+- Databricks Notebooks (Training and Batch Scoring)
 - Web Service (via Plumber in Docker Container)
 
 **Databricks Notebooks**

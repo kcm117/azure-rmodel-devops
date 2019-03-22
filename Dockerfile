@@ -1,6 +1,6 @@
 FROM trestletech/plumber
 
-# Trying to add the three files below to root dir in docker container, then make it run score_service.r
+# Trying to add the three files below to root dir in docker container, then make it run score.R
 
 # https://www.rplumber.io/docs/hosting.html#docker
 # Update 1/14/2019 11:35AM
