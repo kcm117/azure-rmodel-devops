@@ -1,3 +1,7 @@
+# NOTES
+# Run this locally to run a test from the /docker/docker directory"
+# test_dir("tests", reporter = JunitReporter$new(file = "junit_result.xml"))
+
 # Load ttestthat
 library(testthat)
 
