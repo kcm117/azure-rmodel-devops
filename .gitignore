@@ -1,0 +1,4 @@
+# Ignore development and temp files
+.vscode
+.Rdata
+.Rhistory
