@@ -15,7 +15,6 @@ ADD docker/* /app/
 RUN apt-get install -y -q libxml2-dev
 RUN mkdir /app/test-result
 # RUN Rscript /app/tests/0_run.r
-# Copy Test File to Host
 
 
 EXPOSE 8000

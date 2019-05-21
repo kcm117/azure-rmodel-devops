@@ -10,5 +10,5 @@ print(model)
 #* @param height the user height
 #* @get /weight
 function(height=0){
-  predict_weight(height)
+  predict_weight(height,model)
 }
