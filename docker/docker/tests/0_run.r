@@ -4,6 +4,6 @@ if(length(new.packages)) install.packages(new.packages,quiet=TRUE)
 
 library(testthat)
 library(xml2)
-pinrt('***** Begin Tests *****')
+print('***** Begin Tests *****')
 test_dir('/app/tests', reporter = JunitReporter$new(file = '/app/test-result/junit_result.xml'))
-pinrt('***** Test Completed *****')
+print('***** Test Completed *****')
