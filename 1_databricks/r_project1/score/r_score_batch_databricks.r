@@ -21,6 +21,10 @@ print(c(inputdata_path, outputdata_path))
 
 # COMMAND ----------
 
+print('This is a test!')
+
+# COMMAND ----------
+
 # The command below will remove all databricks notebook widgets, if needed.
 # dbutils.widgets.removeAll()
 
