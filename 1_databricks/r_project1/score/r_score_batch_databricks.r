@@ -1,4 +1,8 @@
 # Databricks notebook source
+
+
+# COMMAND ----------
+
 # Get Input Parameters
 
 # Scoring Data Input
@@ -18,10 +22,6 @@ dbutils.widgets.get("outputdata_path")
 outputdata_path = getArgument("outputdata_path")
 
 print(c(inputdata_path, outputdata_path))
-
-# COMMAND ----------
-
-print('This is a test!')
 
 # COMMAND ----------
 
