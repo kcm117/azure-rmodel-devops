@@ -9,7 +9,7 @@ FROM trestletech/plumber
 # Update 1/18/2019 - KC DEMO
 # Update 5/17 add environment variables
 
-ADD docker/* /app/
+ADD ../docker/* /app/
 
 # Perform Testing
 RUN apt-get install -y -q libxml2-dev
