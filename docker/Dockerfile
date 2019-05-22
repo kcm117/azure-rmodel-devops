@@ -9,13 +9,11 @@ FROM trestletech/plumber
 # Update 1/18/2019 - KC DEMO
 # Update 5/17 add environment variables
 
-ADD /docker/* /app/
+ADD /app/ /app/
 
-# Perform Testing
+# Add testing requirements
 RUN apt-get install -y -q libxml2-dev
 RUN mkdir /app/test-result
-# RUN Rscript /app/tests/0_run.r
-
 
 EXPOSE 8000
 CMD ["/app/score.R"]
