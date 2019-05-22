@@ -9,7 +9,7 @@ predict_weight <- function(height=0,model){
   response <- list(response = result)
   
   # Intentional Error
-  return(c(1,2,3,4,5,6,7,8,9,10))
+  #return(c(1,2,3,4,5,6,7,8,9,10))
   # Correct Code
-  #return(response)
+  return(response)
 }
