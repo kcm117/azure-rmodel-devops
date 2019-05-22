@@ -18,6 +18,7 @@ test_that("Load Model", {
 
 # Shape of response
 test_that("Output Shape of response", {
+    model <- load_model("../model.rds")
     result<- predict_weight(height=22, model)
     expect_equal(length(result), 1)
 })
