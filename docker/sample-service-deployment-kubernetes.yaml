@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: kcrwebservice
-        image: kmamlv2preview7614009659.azurecr.io/kcrwebservice:#{BUILDID}#
+        image: amlv2servicekm4930362432.azurecr.io/kcrwebservice:#{BUILDID}#
         imagePullPolicy: Always
         env:
         - name: HOST_PLATFORM
