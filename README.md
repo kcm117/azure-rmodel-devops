@@ -1,4 +1,4 @@
-# rmodel-container-sample
+# azure-rmodel-devops
 
 This is an example project for an operationalized R model on Azure.  It contains:
 - Databricks Notebooks (Training and Batch Scoring)
