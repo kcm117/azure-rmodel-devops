@@ -1,23 +1,21 @@
 {
     "name": "build-#{repo-name}#",
     "existing_cluster_id": "#{cluster-id}#",
-    "libraries": [
-    {
+    "libraries": [{
         "cran": {
-        "package": "testthat"
+            "package": "testthat"
         }
-    }
-    ],
+    }],
     "email_notifications": {},
     "timeout_seconds": 0,
     "notebook_task": {
-    "notebook_path": "",
-    "base_parameters": {
-        "repo_name": "",
-        "build_number": "",
-        "data_test_path":"",
-        "data_train_path":"",
-        "notebook_path":""
+        "notebook_path": "",
+        "base_parameters": {
+            "repo_name": "",
+            "build_number": "",
+            "data_test_path": "",
+            "data_train_path": "",
+            "notebook_path": ""
         }
     }
-  }
+}
