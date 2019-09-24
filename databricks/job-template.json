@@ -11,12 +11,12 @@
     "email_notifications": {},
     "timeout_seconds": 0,
     "notebook_task": {
-    "notebook_path": "/Shared/build/#{repo-name}#/test-master.r",
+    "notebook_path": "",
     "base_parameters": {
         "repo_name": "",
         "build_number": "",
-        "data_test_path":"/dbfs/mnt/adls/data/build-test/r_input_file1.csv",
-        "data_train_path":"/dbfs/mnt/adls/data/build-test/weight_data.csv",
+        "data_test_path":"",
+        "data_train_path":"",
         "notebook_path":""
         }
     }
