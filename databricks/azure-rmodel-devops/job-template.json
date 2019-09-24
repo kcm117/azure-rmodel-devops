@@ -1,0 +1,23 @@
+{
+    "name": "build-#{repo-name}#",
+    "existing_cluster_id": "#{cluster-id}#",
+    "libraries": [
+    {
+        "cran": {
+        "package": "testthat"
+        }
+    }
+    ],
+    "email_notifications": {},
+    "timeout_seconds": 0,
+    "notebook_task": {
+    "notebook_path": "/Shared/build/#{repo-name}#/test-master.r",
+    "base_parameters": {
+        "repo_name": "",
+        "build_number": "",
+        "data_test_path":"/dbfs/mnt/adls/data/build-test/r_input_file1.csv",
+        "data_train_path":"/dbfs/mnt/adls/data/build-test/weight_data.csv",
+        "notebook_path":""
+        }
+    }
+  }
