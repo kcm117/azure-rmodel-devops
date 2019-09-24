@@ -9,7 +9,7 @@
     "email_notifications": {},
     "timeout_seconds": 0,
     "notebook_task": {
-        "notebook_path": "",
+        "notebook_path": "#{master-notebook}#",
         "base_parameters": {
             "repo_name": "",
             "build_number": "",
