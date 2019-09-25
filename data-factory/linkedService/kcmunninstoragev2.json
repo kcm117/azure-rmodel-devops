@@ -1,18 +1,18 @@
 {
 	"name": "kcmunninstoragev2",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
 			"connectionString": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "km330keyvault",
+					"referenceName": "kmdevopskv",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "adf-storagekey-kcmunninstoragev2"
+				"secretName": "storage-gpv2blob-connstring"
 			}
-		},
-		"annotations": []
-	}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
