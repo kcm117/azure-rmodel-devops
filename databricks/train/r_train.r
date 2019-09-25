@@ -3,26 +3,26 @@ print(R.version.string)
 
 # COMMAND ----------
 
-mount_name = "kcmunninstoragev2-databricks" # Change this to the mount name in your Databricks workspace
+mount_name = "adls" # Change this to the mount name in your Databricks workspace
 
 # COMMAND ----------
 
 # Load Training Data
-path = paste("/dbfs/mnt/",mount_name,"/weight_data.csv",sep="")
+path = paste("/dbfs/mnt/",mount_name,"/data/train/weight_data.csv",sep="")
 print(paste("Reading file from",path))
 
-routes<-read.csv(path, header=TRUE)
+data<-read.csv(path, header=TRUE)
 
 # The predictor vector (height).
-x <- routes$height
+x <- data$height
 # The response vector (weight).
-y <- routes$weight
+y <- data$weight
 # Apply the lm() function.
 model <- lm(y~x)
 
 # COMMAND ----------
 
-routes
+data
 
 # COMMAND ----------
 
