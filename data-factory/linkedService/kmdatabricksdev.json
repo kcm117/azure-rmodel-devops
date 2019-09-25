@@ -1,0 +1,19 @@
+{
+	"name": "kmdatabricksdev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://eastus2.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "kmdevopskv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks-token"
+			},
+			"existingClusterId": "0924-164345-sofa329"
+		}
+	}
+}
