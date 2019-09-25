@@ -1,5 +1,6 @@
 {
 	"name": "kmdatabricks",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"type": "AzureDatabricks",
 		"typeProperties": {
@@ -13,6 +14,7 @@
 				"secretName": "adf-databricks-kmdatabricks-token"
 			},
 			"existingClusterId": "0315-143041-hogan461"
-		}
+		},
+		"annotations": []
 	}
 }

@@ -1,9 +1,11 @@
 {
 	"name": "km330keyvault",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"type": "AzureKeyVault",
 		"typeProperties": {
 			"baseUrl": "https://km330keyvault.vault.azure.net/"
-		}
+		},
+		"annotations": []
 	}
 }

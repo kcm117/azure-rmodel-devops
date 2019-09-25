@@ -5,6 +5,7 @@
 			{
 				"name": "r_score_batch_databricks",
 				"type": "DatabricksNotebook",
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -12,6 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Users/kcmunnin@microsoft.com/CustomerDemos/r_notebooks/rproject1/score/r_score_batch_databricks",
 					"baseParameters": {
@@ -40,7 +42,8 @@
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
 			}
-		}
+		},
+		"annotations": []
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

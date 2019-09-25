@@ -1,6 +1,7 @@
 {
 	"name": "blob-trigger-databricks-input_files",
 	"properties": {
+		"annotations": [],
 		"runtimeState": "Started",
 		"pipelines": [
 			{

@@ -1,5 +1,6 @@
 {
 	"name": "kcmunninstoragev2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"type": "AzureBlobStorage",
 		"typeProperties": {
@@ -11,6 +12,7 @@
 				},
 				"secretName": "adf-storagekey-kcmunninstoragev2"
 			}
-		}
+		},
+		"annotations": []
 	}
 }
