@@ -27,7 +27,7 @@ data_test_path = getArgument("data_test_path")
 data_train_path = getArgument("data_train_path")
 
 # Base Directory
-base_dir = paste("/dbfs/mnt/adls/build",repo_name,build_number,sep = "/")
+base_dir = paste("/dbfs/mnt/adlsv2-databricks/build",repo_name,build_number,sep = "/")
 
 # Test Cases
 test_case_dir_unit = paste(base_dir,"test","unit-test-cases",sep="/")

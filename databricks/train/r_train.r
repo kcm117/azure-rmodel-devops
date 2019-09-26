@@ -3,7 +3,7 @@ print(R.version.string)
 
 # COMMAND ----------
 
-mount_name = "adls" # Change this to the mount name in your Databricks workspace
+mount_name = "adlsv2-databricks" # Change this to the mount name in your Databricks workspace
 
 # COMMAND ----------
 
@@ -33,8 +33,16 @@ print(result)
 
 # COMMAND ----------
 
+# Create Paths
+model_dir = paste("/dbfs/mnt/",mount_name,"/models",sep="")
+model_name = "model.rds"
+model_path = paste(model_dir,"/",model_name,sep="")
+
+dir.create(model_dir) # Directory must be created first if it does not exist, or saveRDS will fail
+
 # Save the model to blob storage
 model_path = paste("/dbfs/mnt/",mount_name,"/models/model.rds",sep="")
+
 saveRDS(model, model_path)
 
 # COMMAND ----------

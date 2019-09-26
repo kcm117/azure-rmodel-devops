@@ -38,7 +38,7 @@ print(data)
 # COMMAND ----------
 
 # Load the Model from Blob Storage
-inputmodel_path = "/dbfs/mnt/adls/models/model.rds"
+inputmodel_path = "/dbfs/mnt/adlsv2-databricks/models/model.rds"
 model <- readRDS(inputmodel_path)
 
 # COMMAND ----------

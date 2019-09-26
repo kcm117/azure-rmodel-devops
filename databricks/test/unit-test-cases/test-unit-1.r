@@ -15,7 +15,7 @@ if(is_testing()){
   inputmodel_path <- paste(base_dir,"models","model.rds",sep = "/")
 } else{
   # else load path manually for interactive/dev test
-  inputmodel_path <- "/dbfs/mnt/adls/build/RModel-Repo/454/models/model.rds"
+  inputmodel_path <- "/dbfs/mnt/adlsv2-databricks/build/RModel-Repo/454/models/model.rds"
 }
 
 # COMMAND ----------

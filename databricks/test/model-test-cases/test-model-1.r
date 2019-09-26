@@ -15,9 +15,9 @@ if(is_testing()){
   data_train_path <- test_env$data_train_path
 } else{
   # else load path manually for interactive/dev test
-  inputmodel_path <- "/dbfs/mnt/adls/build/RModel-Repo/454/models/model.rds"
-  data_test_path <- "/dbfs/mnt/adls/data/build-test/r_input_file1.csv"
-  data_train_path <- "/dbfs/mnt/adls/data/build-test/weight_data.csv"
+  inputmodel_path <- "/dbfs/mnt/adlsv2-databricks/build/RModel-Repo/454/models/model.rds"
+  data_test_path <- "/dbfs/mnt/adlsv2-databricks/data/build-test/r_input_file1.csv"
+  data_train_path <- "/dbfs/mnt/adlsv2-databricks/data/build-test/weight_data.csv"
 }
 
 # COMMAND ----------
