@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: kcrwebservice
-        image: amlv2servicekm4930362432.azurecr.io/#{service-name}#:#{BUILDID}#
+        image: #{acr-name}#/#{service-name}#:#{BUILDID}#
         imagePullPolicy: Always
         env:
         - name: HOST_PLATFORM
