@@ -5,6 +5,7 @@
 			{
 				"name": "r_score_batch_databricks",
 				"type": "DatabricksNotebook",
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -12,8 +13,9 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/kcmunnin@microsoft.com/CustomerDemos/r_notebooks/rproject1/score/r_score_batch_databricks",
+					"notebookPath": "/Users/Shared/azure-rmodel-devops/score/r_score_batch_databricks",
 					"baseParameters": {
 						"inputdata_path": {
 							"value": "/dbfs/mnt/kcmunninstoragev2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
@@ -26,7 +28,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "kmdatabricks",
+					"referenceName": "kmdatabricksdev",
 					"type": "LinkedServiceReference"
 				}
 			}
@@ -40,7 +42,8 @@
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
 			}
-		}
+		},
+		"annotations": []
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

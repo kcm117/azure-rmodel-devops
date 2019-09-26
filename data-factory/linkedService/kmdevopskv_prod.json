@@ -1,0 +1,10 @@
+{
+	"name": "kmdevopskv_prod",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kmdevopskv-prod.vault.azure.net/"
+		}
+	}
+}
