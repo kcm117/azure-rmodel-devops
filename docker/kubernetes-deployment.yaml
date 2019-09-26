@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: kcrwebservice
+  name: #{service-name}#
   labels:
-    app: kcrwebservice
+    app: #{service-name}#
 spec:
   selector:
-    run: kcrwebservice
+    run: #{service-name}#
   ports:
   - protocol: TCP
     port: 8000
@@ -16,18 +16,18 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: kcrwebservice
+  name: #{service-name}#
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        run: kcrwebservice
-        app: kcrwebservice
+        run: #{service-name}#
+        app: #{service-name}#
     spec:
       containers:
       - name: kcrwebservice
-        image: amlv2servicekm4930362432.azurecr.io/kcrwebservice:#{BUILDID}#
+        image: amlv2servicekm4930362432.azurecr.io/#{service-name}#:#{BUILDID}#
         imagePullPolicy: Always
         env:
         - name: HOST_PLATFORM
