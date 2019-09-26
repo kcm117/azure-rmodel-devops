@@ -25,3 +25,5 @@ Pull container from ACR and test locally
 
 docker pull amlv2servicekm4930362432.azurecr.io/azure-rmodel-devops:latest
 docker run -p 8000:8000 --name kcrwebservice amlv2servicekm4930362432.azurecr.io/azure-rmodel-devops:latest
+
+# Update feature branch trigger test - feature-1
