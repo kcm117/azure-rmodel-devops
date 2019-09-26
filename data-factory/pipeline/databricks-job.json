@@ -15,14 +15,14 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/Shared/azure-rmodel-devops/score/r_score_batch_databricks",
+					"notebookPath": "/Shared/azure-rmodel-devops/r_score_batch_databricks",
 					"baseParameters": {
 						"inputdata_path": {
-							"value": "/dbfs/mnt/kcmunninstoragev2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
+							"value": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
 							"type": "Expression"
 						},
 						"outputdata_path": {
-							"value": "@concat('/dbfs/mnt/kcmunninstoragev2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))",
+							"value": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))",
 							"type": "Expression"
 						}
 					}
