@@ -10,7 +10,7 @@
 			"servicePrincipalKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "kmdevopskv",
+					"referenceName": "kmdevopskv_prod",
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "sp-kcmunnin-adls-clientsecret-new"
