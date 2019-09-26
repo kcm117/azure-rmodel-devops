@@ -28,7 +28,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "kmdatabricks",
+					"referenceName": "kmdatabricksdev",
 					"type": "LinkedServiceReference"
 				}
 			}
