@@ -1,18 +1,19 @@
 {
-	"name": "kmdatabricks",
+	"name": "kmdatabricksprod",
 	"properties": {
+		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
 			"domain": "https://eastus2.azuredatabricks.net",
 			"accessToken": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "km330keyvault",
+					"referenceName": "kmdevopskv_prod",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "adf-databricks-kmdatabricks-token"
+				"secretName": "databricks-token"
 			},
-			"existingClusterId": "0315-143041-hogan461"
+			"existingClusterId": "0924-164644-peals443"
 		}
 	}
 }
