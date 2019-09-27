@@ -13,6 +13,7 @@ Services Used:
 - Azure Data Factory (referred to as ADF)
 - Azure Container Registry (referred to as ACR)
 - Azure Kubernetes Service (referred to as AKS)
+- Azure Key Vault
 
 For a more detailed walkthrough, please see the associated blog post on my website at [https://www.kcmunnings.com/rmodel-container-sample/](https://www.kcmunnings.com/rmodel-container-sample/).  The goal of this repo is to demonstrate some capabilities for operationalizing a R model on Azure.
 
