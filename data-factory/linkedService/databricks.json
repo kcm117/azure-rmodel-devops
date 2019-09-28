@@ -5,9 +5,6 @@
 			"databricksclusterid": {
 				"type": "String",
 				"defaultValue": "0924-164345-sofa329"
-			},
-			"databricks_clusterid": {
-				"type": "String"
 			}
 		},
 		"annotations": [],
