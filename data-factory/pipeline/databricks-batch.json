@@ -1,0 +1,45 @@
+{
+	"name": "databricks-batch",
+	"properties": {
+		"activities": [
+			{
+				"name": "Run Batch Inference",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/azure-rmodel-devops/r_score_batch_databricks",
+					"baseParameters": {
+						"inputdata_path": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
+						"outputdata_path": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "databricks",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"databricksclusterid": "0924-164345-sofa329"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"source_folder": {
+				"type": "string",
+				"defaultValue": "@triggerBody().folderPath"
+			},
+			"source_file": {
+				"type": "string",
+				"defaultValue": "@triggerBody().fileName"
+			}
+		},
+		"annotations": []
+	}
+}
