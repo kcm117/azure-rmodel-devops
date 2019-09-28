@@ -47,9 +47,6 @@
 			"source_file": {
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
-			},
-			"cluster_id": {
-				"type": "string"
 			}
 		},
 		"annotations": []
