@@ -1,6 +1,11 @@
 {
-	"name": "kmdatabricksprod",
+	"name": "databricks",
 	"properties": {
+		"parameters": {
+			"databricks_clusterid": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
@@ -8,12 +13,12 @@
 			"accessToken": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "kmdevopskv_prod",
+					"referenceName": "keyvault",
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "0924-164644-peals443"
+			"existingClusterId": "@linkedService().databricks_clusterid"
 		}
 	}
 }
