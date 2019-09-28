@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "rmodeladf"
+		},
+		"databricks_properties_typeProperties_existingClusterId": {
+			"value": ""
+		},
+		"kcmunninadlsgen2mpa_properties_typeProperties_url": {
+			"value": "https://databricks@kcmunninadlsgen2mpa.dfs.core.windows.net"
+		},
+		"kcmunninadlsgen2mpa_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"kcmunninadlsgen2mpa_properties_typeProperties_servicePrincipalId": {
+			"value": "c74ca4a7-02f5-46ec-88c8-2136222c3d74"
+		},
+		"keyvault_properties_typeProperties_baseUrl": {
+			"value": "https://kmdevopskv.vault.azure.net/"
+		},
+		"adlsgen2-trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/bc54e366-6543-43f7-b404-cc14e4f525ab/resourceGroups/rg_persisteditems/providers/Microsoft.Storage/storageAccounts/kcmunninadlsgen2mpa"
+		}
+	}
+}
