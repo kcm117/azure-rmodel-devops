@@ -1,8 +1,8 @@
 {
 	"name": "databricks",
 	"properties": {
-		"annotations": [],
 		"type": "AzureDatabricks",
+		"annotations": [],
 		"typeProperties": {
 			"domain": "https://eastus2.azuredatabricks.net",
 			"accessToken": {
