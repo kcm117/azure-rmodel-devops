@@ -18,7 +18,14 @@
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "@linkedService().existingClusterId"
+			"existingClusterId": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks-clusterid"
+			}
 		}
 	}
 }
