@@ -3,8 +3,7 @@
 	"properties": {
 		"parameters": {
 			"existingClusterId": {
-				"type": "String",
-				"defaultValue": "0924-164345-sofa329"
+				"type": "string"
 			}
 		},
 		"annotations": [],
