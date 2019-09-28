@@ -1,9 +1,9 @@
 {
-	"name": "databricks-job",
+	"name": "databricks-batch",
 	"properties": {
 		"activities": [
 			{
-				"name": "r_score_batch_databricks",
+				"name": "Run Batch Inference",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -17,42 +17,29 @@
 				"typeProperties": {
 					"notebookPath": "/Shared/azure-rmodel-devops/r_score_batch_databricks",
 					"baseParameters": {
-						"inputdata_path": {
-							"value": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
-							"type": "Expression"
-						},
-						"outputdata_path": {
-							"value": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))",
-							"type": "Expression"
-						}
+						"inputdata_path": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
+						"outputdata_path": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))"
 					}
 				},
 				"linkedServiceName": {
 					"referenceName": "databricks",
 					"type": "LinkedServiceReference",
 					"parameters": {
-						"databricks_clusterid": {
-							"value": "@pipeline().parameters.cluster_id",
-							"type": "Expression"
-						}
+						"databricksclusterid": "0924-164345-sofa329"
 					}
 				}
 			}
 		],
 		"parameters": {
 			"source_folder": {
-				"type": "String",
+				"type": "string",
 				"defaultValue": "@triggerBody().folderPath"
 			},
 			"source_file": {
-				"type": "String",
+				"type": "string",
 				"defaultValue": "@triggerBody().fileName"
-			},
-			"cluster_id": {
-				"type": "string"
 			}
 		},
 		"annotations": []
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+	}
 }
