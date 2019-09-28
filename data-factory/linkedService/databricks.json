@@ -21,11 +21,6 @@
 				},
 				"secretName": "databricks-clusterid"
 			}
-		},
-		"parameters": {
-			"existingClusterId": {
-				"type": "string"
-			}
 		}
 	}
 }
