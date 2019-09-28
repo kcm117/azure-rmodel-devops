@@ -3,7 +3,8 @@
 	"properties": {
 		"parameters": {
 			"databricks_clusterid": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "0924-164345-sofa329"
 			}
 		},
 		"annotations": [],
