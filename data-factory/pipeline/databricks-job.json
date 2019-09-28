@@ -47,10 +47,6 @@
 			"source_file": {
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
-			},
-			"databricksclusterid": {
-				"type": "string",
-				"defaultValue": "0924-164345-sofa329"
 			}
 		},
 		"annotations": []
