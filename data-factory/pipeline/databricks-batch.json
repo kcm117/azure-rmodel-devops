@@ -46,8 +46,6 @@
 				"defaultValue": "@triggerBody().fileName"
 			}
 		},
-		"annotations": [
-			"Test"
-		]
+		"annotations": []
 	}
 }
