@@ -1,10 +1,15 @@
 {
 	"name": "databricks",
 	"properties": {
+		"parameters": {
+			"databricks_clusterid": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
-			"domain": "https://eastus2.azuredatabricks.net/",
+			"domain": "https://eastus2.azuredatabricks.net",
 			"accessToken": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
@@ -13,7 +18,7 @@
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "0924-164345-sofa329"
+			"existingClusterId": "@linkedService().databricks_clusterid"
 		}
 	}
 }
