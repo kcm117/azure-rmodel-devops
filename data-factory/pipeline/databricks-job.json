@@ -34,10 +34,6 @@
 						"databricksclusterid": {
 							"value": "@pipeline().parameters.databricksclusterid",
 							"type": "Expression"
-						},
-						"databricks_clusterid": {
-							"value": "@pipeline().parameters.cluster_id",
-							"type": "Expression"
 						}
 					}
 				}
