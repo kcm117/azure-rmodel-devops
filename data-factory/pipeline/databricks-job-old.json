@@ -1,5 +1,5 @@
 {
-	"name": "databricks-job",
+	"name": "databricks-job-old",
 	"properties": {
 		"activities": [
 			{
@@ -34,10 +34,6 @@
 						"databricksclusterid": {
 							"value": "@pipeline().parameters.databricksclusterid",
 							"type": "Expression"
-						},
-						"databricks_clusterid": {
-							"value": "@pipeline().parameters.cluster_id",
-							"type": "Expression"
 						}
 					}
 				}
@@ -51,10 +47,6 @@
 			"source_file": {
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
-			},
-			"databricksclusterid": {
-				"type": "string",
-				"defaultValue": "0924-164345-sofa329"
 			}
 		},
 		"annotations": []
