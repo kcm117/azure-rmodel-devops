@@ -1,0 +1,23 @@
+{
+	"name": "adlsgen2-trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "databricks-batch",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/databricks/blobs/input_files/",
+			"scope": "/subscriptions/bc54e366-6543-43f7-b404-cc14e4f525ab/resourceGroups/rg_persisteditems/providers/Microsoft.Storage/storageAccounts/kcmunninadlsgen2mpa",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
