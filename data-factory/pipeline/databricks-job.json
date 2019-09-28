@@ -31,6 +31,10 @@
 					"referenceName": "databricks",
 					"type": "LinkedServiceReference",
 					"parameters": {
+						"databricksclusterid": {
+							"value": "@pipeline().parameters.databricksclusterid",
+							"type": "Expression"
+						},
 						"databricks_clusterid": {
 							"value": "@pipeline().parameters.cluster_id",
 							"type": "Expression"
@@ -48,7 +52,7 @@
 				"type": "String",
 				"defaultValue": "@triggerBody().fileName"
 			},
-			"databricks_clusterid": {
+			"databricksclusterid": {
 				"type": "string",
 				"defaultValue": "0924-164345-sofa329"
 			}
