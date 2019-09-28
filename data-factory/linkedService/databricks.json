@@ -14,12 +14,6 @@
 				"secretName": "databricks-token"
 			},
 			"existingClusterId": "0924-164345-sofa329"
-		},
-		"parameters": {
-			"databricksclusterid": {
-				"type": "String",
-				"defaultValue": "0924-164345-sofa329"
-			}
 		}
 	}
 }

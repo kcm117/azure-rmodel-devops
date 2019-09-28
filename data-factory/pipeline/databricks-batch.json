@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Run Batch Inference",
+				"name": "Execute Inference NB",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -29,10 +29,7 @@
 				},
 				"linkedServiceName": {
 					"referenceName": "databricks",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"databricksclusterid": "0924-164345-sofa329"
-					}
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
