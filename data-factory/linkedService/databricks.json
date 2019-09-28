@@ -2,9 +2,12 @@
 	"name": "databricks",
 	"properties": {
 		"parameters": {
-			"databricks_clusterid": {
+			"databricks-clusterid": {
 				"type": "String",
 				"defaultValue": "0924-164345-sofa329"
+			},
+			"databricks_clusterid": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
@@ -19,7 +22,7 @@
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "@linkedService().databricks_clusterid"
+			"existingClusterId": "@linkedService().databricks-clusterid"
 		}
 	}
 }
