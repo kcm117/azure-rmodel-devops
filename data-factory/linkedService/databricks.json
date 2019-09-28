@@ -1,6 +1,11 @@
 {
 	"name": "databricks",
 	"properties": {
+		"parameters": {
+			"databricksclusterid": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
@@ -13,7 +18,7 @@
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "0924-164345-sofa329"
+			"existingClusterId": "@linkedService().databricksclusterid"
 		}
 	}
 }
