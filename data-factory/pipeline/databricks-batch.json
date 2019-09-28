@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Run Batch Inference",
+				"name": "Execute Inference NB",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -17,14 +17,8 @@
 				"typeProperties": {
 					"notebookPath": "/Shared/azure-rmodel-devops/r_score_batch_databricks",
 					"baseParameters": {
-						"inputdata_path": {
-							"value": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
-							"type": "Expression"
-						},
-						"outputdata_path": {
-							"value": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))",
-							"type": "Expression"
-						}
+						"inputdata_path": "/dbfs/mnt/adlsv2-@{pipeline().parameters.source_folder}/@{pipeline().parameters.source_file}",
+						"outputdata_path": "@concat('/dbfs/mnt/adlsv2-databricks/output_files/',replace(string(pipeline().parameters.source_file),'input','output'))"
 					}
 				},
 				"linkedServiceName": {
