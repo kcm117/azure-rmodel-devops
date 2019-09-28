@@ -29,10 +29,7 @@
 				},
 				"linkedServiceName": {
 					"referenceName": "databricks",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"databricksclusterid": "0924-164345-sofa329"
-					}
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
