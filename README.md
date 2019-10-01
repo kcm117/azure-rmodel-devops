@@ -33,7 +33,7 @@ The inference notebook has associated testing notebooks.  These notebooks use th
 
 ## Git integration
 
-Databricks does have native integration with GitHub, BitBucket and Azure DevOps as of the time of this writing.  However, I have chosen to use the Databricks cli tool to import/export notebooks to my local machine and perform commits and pushes from there to have more control.  One area where this was more convenient was with including the serialized model.rds file in the repo, as I could manually import it into the repo locally and commit/push since arbitrary files cannot be managed in a Databricks workspace.  After the model.rds file was produced in Databricks by the training notebook, I copied it from ADLS Gen2 using the Azure Storage Explorer tool into the /models directory repo locally.
+Databricks does have native integration with GitHub, BitBucket and Azure DevOps as of the time of this writing.  However, I have chosen to use the Databricks cli tool to import/export notebooks to my local machine and perform commits and pushes from there to have more control.  One area where this was more convenient was with including the serialized model.rds file in the repo, as I could manually import it into the repo locally and commit/push since arbitrary files cannot be managed in a Databricks workspace.  After the model.rds file was produced in Databricks by the training notebook, I copied it from ADLS Gen2 using the Azure Storage Explorer tool into the /models directory repo locally.  The same result could have been achieved via the Databricks CLI.
 
 # **Azure Data Factory**
 
