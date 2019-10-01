@@ -15,7 +15,7 @@ Services Used:
 - Azure Kubernetes Service (referred to as AKS)
 - Azure Key Vault
 
-For a more detailed walkthrough, please see the associated blog post on my website at [https://www.kcmunnings.com/azure-rmodel-devops-1/](https://www.kcmunnings.com/azure-rmodel-devops-1/).  The goal of this repo is to demonstrate some capabilities for operationalizing a R model on Azure.
+For a more detailed walkthrough, please see the associated blog post on my website at [https://www.kcmunnings.com/azure-rmodel-devops-1/](https://www.kcmunnings.com/azure-rmodel-devops-1/).  The goal of this repo is to demonstrate some capabilities for operationalizing a R model on Azure (Source Control + Testing + CI + CD).
 
 # **Databricks Notebooks**
 
