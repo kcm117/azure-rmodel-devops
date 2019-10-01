@@ -1,15 +1,15 @@
 ##########
-Local Build
+Local Build/Test - Windows
 ##########
 
 To build this docker container locally, you can perform the following:
 
 1) Open Command Prompt
-2) Change directory to this current directory where the Dockerfile resides
-3) Run the following command to build the container locally:
-	docker build -t kcrwebservice .
+2) Change directory to this current directory where the Dockerfile resides (/azure-rmodel-devops/docker)
+3) Run the following script to build the container locally (on windows):
+	docker-localtest-build-windows.cmd
 4) Run the following command to run the container locally:
-	docker run -p 8000:8000 --name kcrwebservice kcrwebservice:latest
+	docker run -p 8000:8000 --name azure-rmodel-devops azure-rmodel-devops:latest
 5) Perform a HTTP GET against the local endpoint to test (Can do this in browser or via POSTMAN):
 	http://localhost:8000/weight?height=2000
 6) Response from the endpoint will be in the following format:
@@ -18,14 +18,3 @@ To build this docker container locally, you can perform the following:
         -792.5225
     	]
 	}
-
-###########
-Pull container from ACR and test locally
-###########
-
-docker pull amlv2servicekm4930362432.azurecr.io/azure-rmodel-devops:latest
-docker run -p 8000:8000 --name kcrwebservice amlv2servicekm4930362432.azurecr.io/azure-rmodel-devops:latest
-
-# Update feature branch trigger test - feature-1
-# Update 2
-# Update 3
