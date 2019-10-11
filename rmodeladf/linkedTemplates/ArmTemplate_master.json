@@ -26,6 +26,14 @@
 			"type": "string",
 			"defaultValue": "https://kmdevopskv.vault.azure.net/"
 		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_folder": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_file": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
 		"adlsgen2-trigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/bc54e366-6543-43f7-b404-cc14e4f525ab/resourceGroups/rg_persisteditems/providers/Microsoft.Storage/storageAccounts/kcmunninadlsgen2mpa"
@@ -71,6 +79,12 @@
 					},
 					"kcmunninadlsgen2mpa_properties_typeProperties_servicePrincipalId": {
 						"value": "[parameters('kcmunninadlsgen2mpa_properties_typeProperties_servicePrincipalId')]"
+					},
+					"adlsgen2-trigger_properties_databricks-batch_parameters_source_folder": {
+						"value": "[parameters('adlsgen2-trigger_properties_databricks-batch_parameters_source_folder')]"
+					},
+					"adlsgen2-trigger_properties_databricks-batch_parameters_source_file": {
+						"value": "[parameters('adlsgen2-trigger_properties_databricks-batch_parameters_source_file')]"
 					},
 					"adlsgen2-trigger_properties_typeProperties_scope": {
 						"value": "[parameters('adlsgen2-trigger_properties_typeProperties_scope')]"

@@ -26,6 +26,14 @@
 			"type": "string",
 			"defaultValue": "c74ca4a7-02f5-46ec-88c8-2136222c3d74"
 		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_folder": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_file": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
 		"adlsgen2-trigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/bc54e366-6543-43f7-b404-cc14e4f525ab/resourceGroups/rg_persisteditems/providers/Microsoft.Storage/storageAccounts/kcmunninadlsgen2mpa"
@@ -136,12 +144,10 @@
 				],
 				"parameters": {
 					"source_folder": {
-						"type": "string",
-						"defaultValue": "@triggerBody().folderPath"
+						"type": "string"
 					},
 					"source_file": {
-						"type": "string",
-						"defaultValue": "@triggerBody().fileName"
+						"type": "string"
 					}
 				},
 				"annotations": []
@@ -163,7 +169,10 @@
 							"referenceName": "databricks-batch",
 							"type": "PipelineReference"
 						},
-						"parameters": {}
+						"parameters": {
+							"source_folder": "[parameters('adlsgen2-trigger_properties_databricks-batch_parameters_source_folder')]",
+							"source_file": "[parameters('adlsgen2-trigger_properties_databricks-batch_parameters_source_file')]"
+						}
 					}
 				],
 				"type": "BlobEventsTrigger",

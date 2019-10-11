@@ -20,6 +20,12 @@
 		"keyvault_properties_typeProperties_baseUrl": {
 			"value": "https://kmdevopskv.vault.azure.net/"
 		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_folder": {
+			"value": "@triggerBody().folderPath"
+		},
+		"adlsgen2-trigger_properties_databricks-batch_parameters_source_file": {
+			"value": "@triggerBody().fileName"
+		},
 		"adlsgen2-trigger_properties_typeProperties_scope": {
 			"value": "/subscriptions/bc54e366-6543-43f7-b404-cc14e4f525ab/resourceGroups/rg_persisteditems/providers/Microsoft.Storage/storageAccounts/kcmunninadlsgen2mpa"
 		}
