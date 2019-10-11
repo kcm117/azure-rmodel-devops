@@ -8,6 +8,10 @@
 				"pipelineReference": {
 					"referenceName": "databricks-batch",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"source_folder": "@triggerBody().folderPath",
+					"source_file": "@triggerBody().fileName"
 				}
 			}
 		],
