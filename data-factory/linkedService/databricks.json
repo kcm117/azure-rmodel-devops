@@ -1,6 +1,5 @@
 {
 	"name": "databricks",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureDatabricks",
@@ -14,7 +13,8 @@
 				},
 				"secretName": "databricks-token"
 			},
-			"existingClusterId": "0924-164345-sofa329"
+			"existingClusterId": "1120-033008-foods381"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
